@@ -91,7 +91,7 @@ header {
     background: url("../images/rosie.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     min-height: 360px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -283,39 +283,29 @@ footer .cv-pdf i:hover {
     margin: 0;
 }
 
-.timeline-item::before {
-    content: attr(dates);
+.timeline-item:before {
+    content: attr(data-dates);
     position: absolute;
     left: 2.5em;
-    /* font-weight: bold;*/
-    top: 3em;
+    top: 3.5em;
     display: block;
-    font-family: 'Exo', sans-serif;
+    font-family: "exo", sans-serif;
     font-weight: 500;
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 0;
     margin: 0;
 }
 
-.timeline-item::after {
-    width: 12px;
+.timeline-item:after {
+    width: 20px;
     height: 12px;
     display: block;
-    top: 2.4em;
     position: absolute;
+    top: 2.9em;
     left: -6px;
-    border-radius: 12px;
-    content: '';
+    border-radius: 6px;
+    content: "";
     background: #fafafa;
-}
-
-.timeline-item h4:hover {
-    color: #aaaaaa;
-    transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -webkit-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out
 }
 
 /*work*/
@@ -328,14 +318,12 @@ footer .cv-pdf i:hover {
     background-color: #ffffff;
 }
 
-
-
 /*--------------------------------------------Skills*/
-
 
 .progress {
     position: relative;
 	height: 25px;
+	
 }
 .progress > .progress-type {
 	position: absolute;
